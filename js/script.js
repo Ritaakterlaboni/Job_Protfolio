@@ -23,12 +23,11 @@
 
     // Typewriter roles
 const roles = [
-  "HTML Developer",
-  "CSS Stylist",
-  "JavaScript Coder",
-  "Bootstrap Expert",
-  "Tailwind Designer",
-  "React Developer",
+  "Fontend Developer",
+  "Web Designer",
+  "UI/UX Designer",
+  "Web Developer",
+  
 ];
 const rolesEl = document.getElementById("roles");
 
