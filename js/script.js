@@ -22,17 +22,58 @@
     ids.forEach(id=>{const el=document.querySelector(id); if(el) obs.observe(el)});
 
     // Typewriter roles
-    const roles = ['UI/UX Designer','Web Designer','Web Developer'];
-    const rolesEl = document.getElementById('roles');
-    let ri=0, ci=0, del=false;
-    function tick(){
-      const word = roles[ri];
-      rolesEl.textContent = (del ? word.slice(0,ci--) : word.slice(0,ci++));
-      if(!del && ci>word.length+5){del=true}
-      if(del && ci<0){del=false; ri=(ri+1)%roles.length}
-      setTimeout(tick, del?70:100);
+const roles = [
+  "HTML Developer",
+  "CSS Stylist",
+  "JavaScript Coder",
+  "Bootstrap Expert",
+  "Tailwind Designer",
+  "React Developer",
+];
+const rolesEl = document.getElementById("roles");
+
+let ri = 0; // role index
+let ci = 0; // char index
+let del = false; // deleting?
+
+function tick() {
+  const word = roles[ri];
+
+  if (!del) {
+    // typing phase
+    rolesEl.textContent = word.slice(0, ci);
+    ci++;
+
+    if (ci > word.length) {
+      del = true; // start deleting
+      setTimeout(tick, 800); // full-word pause
+      return;
     }
-    tick();
+
+    setTimeout(tick, 100);
+  } else {
+    // deleting phase
+    rolesEl.textContent = word.slice(0, ci);
+    ci--;
+
+    if (ci < 0) {
+      del = false; // move to next word
+      ri = (ri + 1) % roles.length;
+      ci = 0; // IMPORTANT: reset to 0 to avoid flash
+      setTimeout(tick, 150); // small pause before typing next
+      return;
+    }
+
+    setTimeout(tick, 70);
+  }
+}
+
+tick();
+
+
+
+
+    
 
     // Skill bars animate on view
     const bars = document.querySelectorAll('.bar');
@@ -50,19 +91,34 @@
       works.forEach(w=>{ w.style.display = (f==='all'|| w.dataset.cat===f) ? 'block' : 'none'; });
     }));
 
-    // Facts counter
-    const nums = document.querySelectorAll('.num');
-    const ob3 = new IntersectionObserver((es)=>{
-      es.forEach(e=>{
-        if(e.isIntersecting){
-          const el=e.target; const target=+el.dataset.count; let cur=0; const step=Math.ceil(target/60);
-          const it=setInterval(()=>{cur+=step; if(cur>=target){cur=target; clearInterval(it)} el.textContent=cur}, 20);
-          ob3.unobserve(el);
-        }
-      })
-    },{threshold:.5});
-    nums.forEach(n=>ob3.observe(n));
+   
+// Facts counter
+const nums = document.querySelectorAll(".num");
 
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = +el.dataset.count;
+      const duration = 2000; // 2 second animation
+      let start = 0;
+      const stepTime = Math.max(Math.floor(duration / target), 20);
+
+      const counter = setInterval(() => {
+        start++;
+        el.textContent = start;
+        if (start >= target) {
+          el.textContent = target;
+          clearInterval(counter);
+        }
+      }, stepTime);
+
+      obs.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+nums.forEach(num => observer.observe(num));
     // Simple testimonials auto-rotate
     const t = document.getElementById('testi');
     let tIndex=0; setInterval(()=>{

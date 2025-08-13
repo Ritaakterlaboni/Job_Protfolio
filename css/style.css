@@ -84,9 +84,18 @@
         background-attachment: fixed !important;
     }
     .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center; padding:80px 0}
-    .hero h1{font-size: clamp(28px, 4.2vw, 56px); line-height:1.08; margin:0 0 14px}
-    .hero .roles{font-size: clamp(16px,2.2vw,22px); color:var(--muted); min-height:28px}
-    .hero .cta{display:flex; gap:14px; margin-top:26px}
+    .hero h1{
+        font-size: clamp(28px, 4.2vw, 56px); 
+        line-height:1.08; 
+        margin:0 0 14px;
+    }
+
+
+    .hero .cta{
+        display:flex; 
+        gap:14px; 
+        margin-top:26px;
+    }
     .btn{
         display:inline-flex; 
         align-items:center; 
@@ -112,6 +121,15 @@
     .hero-figure{position:relative; aspect-ratio:1/1; border-radius:22px; overflow:hidden;}
     .hero-figure::after{content:""; position:absolute; inset:0; background:radial-gradient(70% 70% at 30% 20%, rgba(91,140,255,.25), transparent 60%)}
 
+
+    .hero .roles {
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 500;
+  color: var(--muted);
+  letter-spacing: 0.5px;
+  min-height: 36px;
+
+    }
     /* Sections */
     section{padding:70px 0}
     .section-head{display:flex; align-items:end; justify-content:space-between; margin-bottom:28px}
@@ -163,6 +181,10 @@
         border: #9aa1b2 1px solid; 
     }
 
+ 
+    .service .icon{
+        color:var(--brand-2)
+    }
     /* Resume timeline */
     .timeline{display:grid; grid-template-columns:1fr 1fr; gap:22px}
     .item{padding:20px; position:relative}
@@ -170,6 +192,9 @@
     .item .range{font-size:12px; color:var(--brand)}
 
     /* Portfolio */
+    .card{
+        border-radius: 10px;
+    }
     .filters{display:flex; gap:10px; flex-wrap:wrap}
     .chip{padding:8px 12px; border-radius:999px; border:1px solid var(--border); background:#12141b; cursor:pointer; font-size:13px}
     .chip.active{background:linear-gradient(135deg,var(--brand),var(--brand-2)); color:#0b0c11; border-color:transparent}
@@ -212,6 +237,12 @@
   }
 }
 
+/* Footer */
+
+.footer-socials a{
+    margin-right: 5px;
+}
+/* Footer */
 
 
     /* Color switcher (simple) */
