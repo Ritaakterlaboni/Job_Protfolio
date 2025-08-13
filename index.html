@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Rita – Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sonsie+One&display=swap" rel="stylesheet">
+
+<!-- roboto fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sonsie+One&display=swap" rel="stylesheet">
+<!-- roboto fonts -->
+
+<link rel="stylesheet" href="css/style.css" />
+      <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav ">
+      <a href="#home" class="brand"><span class="logo"><img src="./images/mylogo-removebg-preview.png" alt="logo"></span class="name"> Rita Akter</a>
+      <nav>
+        <button class="menu-btn" id="menuBtn">Menu ▾</button>
+        <ul id="desktopNav">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="mobile hidden lg:hidden" id="mobileNav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#resume">Resume</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+<section class="Hero w-full">
+      <main id="home" class="container hero">
+    <div>
+      <p class="eyebrow">Hi there, I’m</p>
+      <h1 class="pt-8 pb-8 name">Rita Akter Laboni</h1>
+      <div class="roles" id="roles">UI/UX Designer · Web Designer · Web Developer</div>
+      <p class="pt-6 pb-6 pr-[145px] tittle">I am Rita Akter Laboni. My expertise is in creating & designing websites with responsive.Creative Frontend Developer with a passion for building responsive, user-friendly websites and web applications.</p>
+      <div class="cta">
+        <a class="btn primary" href="#contact">Hire Me</a>
+        <a class="btn" href="#portfolio">See Works</a>
+      </div>
+    </div>
+    <!-- <div class="card hero-figure">
+      <img src="/images/home.jpg" alt="Portrait" />
+    </div> -->
+  </main>
+</section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">01. About Me</div>
+          <h2 class="title">I am Rita Akter Laboni, a passionate web designer & developer.</h2>
+        </div>
+      </div>
+      <div class="about-grid">
+        <div class="card about-card">
+          <p class="muted pb-8">I craft modern, accessible websites and delightful interfaces. I love solving real user problems with clean design and solid frontend engineering.</p>
+          <dl class="kv">
+            <dt>Name:</dt><dd>Rita Akter</dd>
+            <dt>Phone:</dt><dd>01880102830</dd>
+            <dt>Address:</dt><dd>Demra, Dhaka, Stafquyater</dd>
+
+          </dl>
+          <div class="aboutBtn"><a href="https://github.com/Ritaakterlaboni/" target="_blank" title="click me">Github</a></div>
+          <div class="aboutBtn"><a href="./CV/Rita Akter Laboni.pdf" download="Rita Akter Laboni.pdf">Download CV</a></div>
+
+        </div>
+        <div class="card about-card">
+          <div class="section-head" style="margin:0 0 12px;">
+            <div>
+              <div class="eyebrow">02. My Skills</div>
+              <h3 class="title" style="font-size:20px">Personal & Professional</h3>
+            </div>
+          </div>
+          <div class="skills">
+            <div class="skill card">
+              <h4>Communication</h4>
+              <div class="meter"><div class="bar" data-val="85"></div></div>
+            </div>
+            <div class="skill card">
+              <h4>Teamwork</h4>
+              <div class="meter"><div class="bar" data-val="90"></div></div>
+            </div>
+          
+            <div class="skill card">
+              <h4>HTML5 & CSS3</h4>
+              <div class="meter"><div class="bar" data-val="92"></div></div>
+            </div>
+            <div class="skill card">
+              <h4>JavaScript</h4>
+              <div class="meter"><div class="bar" data-val="88"></div></div>
+            </div>
+            <div class="skill card">
+              <h4>Tailwind css & Bootstrap</h4>
+              <div class="meter"><div class="bar" data-val="82"></div></div>
+            </div>
+              <div class="skill card">
+              <h4>React js</h4>
+              <div class="meter"><div class="bar" data-val="70"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">03. My Services</div>
+          <h2 class="title pb-8">What I Do</h2>
+        </div>
+      </div>
+      <div class="services">
+        <article class="card service mb-5">
+          <h3 class="pb-4 text-[20px]">Creative Design</h3>
+          <p class="muted">Brand‑first visuals and elegant UI systems for the modern web.</p>
+        </article>
+        <article class="card service mb-5">
+          <h3 class="pb-4 text-[20px]">Branding</h3>
+          <p class="muted">Identity, voice, and consistency across every customer touchpoint.</p>
+        </article>
+        <article class="card service mb-5">
+          <h3 class="pb-4 text-[20px]">User Interface</h3><p class="muted">Beautiful, accessible components with micro‑interactions.</p>
+        </article>
+        <article class="card service">
+          <h3 class="pb-4 text-[20px]">User Experience</h3><p class="muted">Flows and information architecture that just make sense.</p>
+        </article>
+        <article class="card service">
+          <h3 class="pb-4 text-[20px]">Clean Code</h3><p class="muted">Maintainable, documented, and performance‑minded frontend.</p>
+        </article>
+        <article class="card service">
+          <h3 class="pb-4 text-[20px]">Fast Support</h3><p class="muted">Clear communication and reliable delivery.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section id="resume">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">04. My Resume</div>
+          <h2 class="title">Experience & Education</h2>
+        </div>
+      </div>
+      <div class="timeline">
+     
+        <div class="card item">
+          <div class="range">2025 Running</div>
+          <h4>Uttara University</h4>
+          <p class="muted">Bsc in Computer Science.</p>
+        </div>
+        <div class="card item">
+          <div class="range">2024 May – 2025 August</div>
+          <h4>Front‑End Developer</h4>
+          <p class="muted">I turn Figma mockups into clean, responsive code with HTML,CSS,JS, Tailwind & Bootstrap.</p>
+        </div>
+        <div class="card item">
+          <div class="range">2013 – 2014</div>
+          <h4>NIET (Narayanganj)</h4>
+          <p class="muted">Diploma in Computer Science.</p>
+        </div>
+        <div class="card item">
+          <div class="range">2025 Running</div>
+          <h4>Creative IT Institute</h4>
+          <p class="muted">Mearn Stack Development</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">05. My Portfolio</div>
+          <h2 class="title">Selected Works</h2>
+        </div>
+      </div>
+      <div class="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="web">Web Design</button>
+        <button class="chip" data-filter="graphic">Graphic Design</button>
+        <button class="chip" data-filter="brand">Branding</button>
+      </div>
+      <div class="grid" id="workGrid">
+        <figure class="work" data-cat="web"><img src="./images/Screenshot (41).png" alt="work1"><figcaption class="cap">Web Design</figcaption></figure>
+        <figure class="work" data-cat="graphic"><img src="./images/Screenshot (45).png" alt="work2"><figcaption class="cap">Graphic Design</figcaption></figure>
+        <figure class="work" data-cat="brand"><img src="./images/Screenshot (43).png" alt="work3"><figcaption class="cap">Branding</figcaption></figure>
+        <figure class="work" data-cat="web"><img src="./images/Screenshot (49).png" alt="work4"><figcaption class="cap">Web Design</figcaption></figure>
+        <figure class="work" data-cat="graphic"><img src="./images/Screenshot (46).png" alt="work5"><figcaption class="cap">Graphic Design</figcaption></figure>
+        <figure class="work" data-cat="brand"><img src="./images//Screenshot (48).png" alt="work6"><figcaption class="cap">Branding</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Fun Facts -->
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">06. Fun Facts</div>
+          <h2 class="title">Some Numbers</h2>
+        </div>
+      </div>
+      <div class="facts">
+        <div class="card fact"><div class="num" data-count="5">0</div><div class="muted">personal Projects</div></div>
+        <div class="card fact"><div class="num" data-count="33">0</div><div class="muted">github commits</div></div>
+        <div class="card fact"><div class="num" data-count="4">0</div><div class="muted">Certificate</div></div>
+        <div class="card fact"><div class="num" data-count="6">0</div><div class="muted">Tutoring Hours</div></div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">09. Contact Me</div>
+          <h2 class="title">Let’s Work Together</h2>
+        </div>
+      </div>
+      <div class="grid contact-grid">
+  <div class="card" style="padding:22px">
+    <h3>Location</h3>
+    <p class="muted pb-4">Demra, Dhaka, Stafquyater</p>
+    <h3>Email</h3>
+    <p class="muted pb-4">ritaakterlaboni4@gmail.com</p>
+    <h3>Phone</h3>
+    <p class="muted">01880102830</p>
+  </div>
+  <div class="card" style="padding:22px">
+    <form id="contactForm" novalidate>
+      <input type="text" placeholder="Your Name" id="name" required>
+      <input type="email" placeholder="Your Email" id="email" required>
+      <input type="text" placeholder="Subject" id="subject" class="full" required>
+      <textarea placeholder="Message" id="message" class="full" required></textarea>
+      <button class="btn primary full" type="submit">Send Message</button>
+      <p id="formMsg" class="muted" style="margin:8px 0 0"></p>
+    </form>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">All Right Reserved © 2025 RitaAkterDesign </div>
+  </footer>
+
+  <!-- Color Switcher -->
+  <div class="switcher" aria-label="Color Switcher">
+    <button class="sw" style="background:#5b8cff" data-theme="blue" title="Blue"></button>
+    <button class="sw" style="background:#ff7eb3" data-theme="pink" title="Pink"></button>
+    <button class="sw" style="background:#7aeea8" data-theme="mint" title="Mint"></button>
+  </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
