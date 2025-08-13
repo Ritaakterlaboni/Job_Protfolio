@@ -81,7 +81,7 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        background-attachment: fixed;
+        background-attachment: fixed !important;
     }
     .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:40px; align-items:center; padding:80px 0}
     .hero h1{font-size: clamp(28px, 4.2vw, 56px); line-height:1.08; margin:0 0 14px}
